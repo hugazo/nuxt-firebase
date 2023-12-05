@@ -1,9 +1,9 @@
 module.exports = {
   root: true,
   extends: [
-    '@nuxt/eslint-config',
     'airbnb-base',
     'airbnb-typescript/base',
+    '@nuxt/eslint-config',
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
