@@ -14,5 +14,6 @@
 </template>
 
 <script setup lang="ts">
-const hi = () => console.log('hi')
+// eslint-disable-next-line no-console
+const hi = () => console.log('hi');
 </script>

@@ -1,5 +1,3 @@
-export default defineEventHandler(async () => {
-  return {
-    message: `Hello nuxt!`
-  };
-});
+export default defineEventHandler(async () => ({
+  message: 'Hello nuxt!',
+}));
