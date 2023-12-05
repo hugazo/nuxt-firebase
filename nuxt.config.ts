@@ -18,6 +18,8 @@ export default defineNuxtConfig({
     },
     // Eslint module
     '@nuxtjs/eslint-module',
+    // VueUse
+    '@vueuse/nuxt',
   ],
   vite: {
     vue: {

@@ -3,17 +3,20 @@
     <h1 class="py-4">
       Home page
     </h1>
-    <v-btn
-      class="py-4"
-      prepend-icon="$vuetify"
-      @click="hi"
-    >
-      Click me
-    </v-btn>
+    <p>
+      {{ message }}
+    </p>
   </div>
 </template>
 
 <script setup lang="ts">
-// eslint-disable-next-line no-console
-const hi = () => console.log('hi');
+const hello = async () => {
+  const { message } = await $fetch('/api/hello');
+  return message;
+};
+
+const message = computedAsync(
+  hello,
+  'Loading message...',
+);
 </script>
