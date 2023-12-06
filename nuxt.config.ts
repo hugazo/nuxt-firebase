@@ -1,6 +1,9 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 
 export default defineNuxtConfig({
+  routeRules: {
+    '/': { prerender: true },
+  },
   devtools: { enabled: true },
   build: {
     transpile: [

@@ -12,7 +12,6 @@
 - Added Nuxt Eslint Module <https://nuxt.com/modules/eslint>
 - Added Nuxt Eslint Config <https://github.com/nuxt/eslint-config>
 
-
 TODO:
 
 - [ ] Add Nuxt Stylelint Module <https://nuxt.com/modules/stylelint>
