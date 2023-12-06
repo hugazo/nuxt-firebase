@@ -6,10 +6,15 @@
     <p>
       {{ message }}
     </p>
-    <pre v-if="user">{{ user }}</pre>
-    <p v-else>
-      No user logged
-    </p>
+    <template v-if="user">
+      <p>
+        Logged as: {{ user.email }}
+      </p>
+      <AuthSignOutButton />
+    </template>
+    <template v-else>
+      <AuthGoogleLoginButton />
+    </template>
   </div>
 </template>
 

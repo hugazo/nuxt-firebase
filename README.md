@@ -7,6 +7,7 @@ This is a Nuxt 3 project that uses Firebase for authentication and database. Can
 Create a `.env` file in the root of the project with the following variables from the firebase project:
 
 ```bash
+NODE_ENV="development"
 # Firebase
 FIREBASE_API_KEY=
 FIREBASE_AUTH_DOMAIN=

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "firebase emulators:start --only=auth & nuxt dev",
     "generate": "nuxt generate",
     "preview": "pnpm build && firebase emulators:start",
     "postinstall": "nuxt prepare"
