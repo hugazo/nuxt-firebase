@@ -1,5 +1,13 @@
 # This is a history file
 
+## 20231205
+
+- Handled firebase build with Nuxt
+  - <https://nuxt.com/docs/getting-started/deployment#presets>
+  - <https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering>
+  - <https://nitro.unjs.io/deploy/providers/firebase>
+  - <https://nitro.unjs.io/deploy/providers/firebase#using-2nd-generation-firebase-functions>
+
 ## 20231204
 
 - Added Airbnb Eslint Base Guide <https://www.npmjs.com/package/eslint-config-airbnb-base>

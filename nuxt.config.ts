@@ -3,6 +3,13 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 export default defineNuxtConfig({
   routeRules: {
     '/': { prerender: true },
+    '/api/**': { ssr: false },
+  },
+  nitro: {
+    preset: 'firebase',
+    firebase: {
+      gen: 2,
+    },
   },
   devtools: { enabled: true },
   build: {
