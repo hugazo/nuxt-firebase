@@ -7,6 +7,9 @@
   - <https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering>
   - <https://nitro.unjs.io/deploy/providers/firebase>
   - <https://nitro.unjs.io/deploy/providers/firebase#using-2nd-generation-firebase-functions>
+- Added VueFire for Handling Firebase bindings
+  - <https://vuefire.vuejs.org/nuxt/getting-started.html>
+  - <https://vuefire.vuejs.org/nuxt/auth.html>
 
 ## 20231204
 
