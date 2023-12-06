@@ -6,6 +6,10 @@
     <p>
       {{ message }}
     </p>
+    <pre v-if="user">{{ user }}</pre>
+    <p v-else>
+      No user logged
+    </p>
   </div>
 </template>
 
@@ -19,4 +23,6 @@ const message = computedAsync(
   hello,
   'Loading message...',
 );
+
+const user = useCurrentUser();
 </script>
