@@ -3,6 +3,7 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 export default defineNuxtConfig({
   routeRules: {
     '/': { ssr: false },
+    '/admin/**': { ssr: false },
     '/api/**': { ssr: true },
   },
   nitro: {
