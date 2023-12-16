@@ -12,13 +12,6 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
   },
-  overrides: [
-    {
-      files: ['*.vue'],
-      rules: {
-        'import/prefer-default-export': 0,
-      },
-    },
-  ],
 };
