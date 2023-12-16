@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+// Simple nuxt api test
 const hello = async () => {
   const { message } = await $fetch('/api/hello');
   return message;
@@ -29,5 +30,6 @@ const message = computedAsync(
   'Loading message...',
 );
 
+// Simple firebase auth spa handling
 const user = useCurrentUser();
 </script>
