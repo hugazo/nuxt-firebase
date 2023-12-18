@@ -2,14 +2,14 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify';
 
 export default defineNuxtConfig({
   routeRules: {
-    '/': { ssr: false },
-    '/admin/**': { ssr: false },
+    '/*/**': { ssr: false },
     '/api/**': { ssr: true },
   },
   nitro: {
     preset: 'firebase',
     firebase: {
       gen: 2,
+      nodeVersion: '20',
     },
   },
   devtools: { enabled: true },
@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     auth: {
       enabled: true,
     },
-    emulators: process.env.NODE_ENV === 'development',
+    emulators: process.env.MODE === 'development' || process.env.NODE_ENV === 'development',
     config: {
       apiKey: process.env.FIREBASE_API_KEY,
       authDomain: process.env.FIREBASE_AUTH_DOMAIN,

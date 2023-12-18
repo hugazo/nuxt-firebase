@@ -25,3 +25,4 @@ logs
 
 .firebaserc
 service-account.json
+functions/dist

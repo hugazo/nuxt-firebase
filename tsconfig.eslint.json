@@ -1,6 +1,14 @@
 {
     "extends": "./tsconfig.json",
+    "exclude": [
+      "./node_modules",
+      "./.nuxt",
+      ".output",
+      "./functions/dist/*"
+    ],
     "include": [
+        "./functions/src/*",
+        "./functions/rollup.config.mjs",
         "./.eslintrc.cjs",
         "./**/*.vue",
         "./**/*.ts"

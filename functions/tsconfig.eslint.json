@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "rollup.config.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
