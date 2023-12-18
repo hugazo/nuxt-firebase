@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "concurrently --names 'nuxt,emulator,functions' 'pnpm dev' 'pnpm emulators' 'pnpm dev:functions'",
+    "dev": "concurrently --names 'nuxt,emulator,functions' 'nuxt dev' 'pnpm emulators' 'pnpm dev:functions'",
     "emulators": "firebase emulators:start --only=auth,functions",
     "dev:functions": "cd functions && pnpm run dev",
     "generate": "nuxt generate",

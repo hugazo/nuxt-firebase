@@ -1,9 +1,5 @@
 import esbuild from 'rollup-plugin-esbuild';
-import { createRequire } from 'module';
-
-const require = createRequire(import.meta.url);
-
-const mainFile = require('./package.json');
+import mainFile from './package.json' assert { type: 'json' };
 
 const mainEntrypoint = mainFile.main.replace(/\.js$/, '');
 
