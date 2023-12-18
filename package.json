@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "firebase emulators:start --only=auth,functions & nuxt dev",
+    "dev": "concurrently --names 'nuxt,emulator,functions' 'pnpm dev' 'pnpm emulators' 'pnpm dev:functions'",
+    "emulators": "firebase emulators:start --only=auth,functions",
+    "dev:functions": "cd functions && pnpm run dev",
     "generate": "nuxt generate",
     "preview": "pnpm build && firebase emulators:start",
     "postinstall": "nuxt prepare"
@@ -17,6 +19,7 @@
     "@typescript-eslint/parser": "^6.0.0",
     "@vueuse/core": "^10.6.1",
     "@vueuse/nuxt": "^10.6.1",
+    "concurrently": "^8.2.2",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
