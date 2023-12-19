@@ -10,7 +10,9 @@
         Logout
       </v-btn>
     </v-app-bar>
-    <NuxtPage />
+    <v-main>
+      <NuxtPage />
+    </v-main>
   </div>
 </template>
 
