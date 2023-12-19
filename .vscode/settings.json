@@ -3,5 +3,8 @@
     "activityBar.background": "#41B883",
     "activityBar.activeBackground": "#34495E",
     "activityBar.foreground": "#000000db"
+  },
+  "material-icon-theme.folders.associations": {
+    "functions": "Firebase",
   }
 }
