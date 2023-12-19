@@ -1,4 +1,4 @@
-import { DecodedIdToken, getAuth } from 'firebase-admin/auth';
+import { getAuth } from 'firebase-admin/auth';
 
 export default defineEventHandler(async (event) => {
   // Disables this middleware on client-side
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
       // Verifies the token
       const verified = await auth.verifyIdToken(authHeader);
       // Assigns the token to the user context
-      event.context.user = verified as DecodedIdToken;
+      event.context.user = verified;
     } else {
       throw createError({
         statusCode: 401,
