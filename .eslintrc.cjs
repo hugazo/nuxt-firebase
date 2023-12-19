@@ -14,4 +14,12 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
   },
+  overrides: [
+    {
+      files: ['server/**/*.ts'],
+      rules: {
+        'no-param-reassign': 0,
+      },
+    },
+  ],
 };

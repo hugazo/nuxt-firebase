@@ -3,15 +3,17 @@ export default defineNuxtRouteMiddleware(async (to) => {
   if (process.server) return;
   const user = await getCurrentUser();
   if (to.path === '/') return;
-  if (!user) {
-    // Redirect to login page if user is not logged in
-    // eslint-disable-next-line consistent-return
-    return navigateTo({
-      path: '/',
-      query: {
-        redirect: to.path,
-      },
-    });
+  if (user) {
+    const token = `Bearer ${await user.getIdToken()}`;
+    const fetchInstance = $fetch.create({ baseURL: '/', headers: { Authorization: token } });
+    // Assigns token to $fetch
+    $fetch = fetchInstance;
   }
-  console.log('User is logged in', user.email);
+  // Redirect to login page if user is not logged in
+  navigateTo({
+    path: '/',
+    query: {
+      redirect: to.path,
+    },
+  });
 });
