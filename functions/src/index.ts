@@ -1,11 +1,12 @@
 import { onRequest } from 'firebase-functions/v2/https';
 import { logger } from 'firebase-functions';
+import { initializeApp } from 'firebase-admin/app';
 
-import * as UserFunctions from './user.js';
+initializeApp();
+
+export * as User from './user.js';
 
 export const helloWorld = onRequest((request, response) => {
   logger.info('Hello logs!', { structuredData: true });
   response.send('Hello from Firebase!');
 });
-
-export const userFunctions = UserFunctions;
