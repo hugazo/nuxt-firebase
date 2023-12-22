@@ -10,6 +10,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     project: './tsconfig.eslint.json',
   },
+  ignorePatterns: ['functions/dist/**/*'],
   rules: {
     'import/no-extraneous-dependencies': 0,
     'import/prefer-default-export': 0,
