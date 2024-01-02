@@ -4,7 +4,6 @@ import { onCall } from 'firebase-functions/v2/https';
 import { logger } from 'firebase-functions/v2';
 import { checkUserRole } from '../utils/auth.js';
 
-
 // Example of blocking functions
 // https://firebase.google.com/docs/auth/extend-with-blocking-functions?gen=2nd#understanding_blocking_functions
 
@@ -23,8 +22,5 @@ export const getAllUsers = onCall(async (context) => {
   const token = context.data?.nextPageToken || undefined;
   const auth = getAuth();
   const result = await auth.listUsers(10, token);
-  return {
-    users: result.users,
-    nextPageToken: result.pageToken,
-  };
+  return result;
 });
