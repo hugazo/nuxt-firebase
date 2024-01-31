@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="queryResult.users">
+    <template v-if="queryResult">
       <v-data-table :items="queryResult.users" />
     </template>
     <p v-else>
@@ -14,8 +14,12 @@ import type { ListUsersResult } from 'firebase-admin/auth';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 
 const queryResult = computedAsync(async () => {
-  const functions = getFunctions();
-  const { data } = await httpsCallable(functions, 'User-getAllUsers')();
-  return data as ListUsersResult;
+  try {
+    const functions = getFunctions();
+    const { data } = await httpsCallable(functions, 'User-getAllUsers')();
+    return data as ListUsersResult;
+  } catch (error) {
+    return [];
+  }
 });
 </script>
