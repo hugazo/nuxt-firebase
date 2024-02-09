@@ -5,3 +5,7 @@
     </NuxtLayout>
   </v-app>
 </template>
+
+<script setup>
+useAppTheme();
+</script>

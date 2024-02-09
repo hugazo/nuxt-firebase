@@ -23,6 +23,10 @@
       <v-card-text class="text-center">
         <AuthGoogleLoginButton />
         <AuthFacebookLoginButton />
+        <p class="py-2">
+          Or you can turn the lights
+        </p>
+        <ThemeTogglerButton />
       </v-card-text>
     </v-card>
   </div>
@@ -32,7 +36,4 @@
 definePageMeta({
   middleware: ['no-auth'],
 });
-
-// Simple firebase auth spa handling
-// const user = useCurrentUser();
 </script>
