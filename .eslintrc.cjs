@@ -22,5 +22,11 @@ module.exports = {
         'no-param-reassign': 0,
       },
     },
+    {
+      files: ['middleware/**/*.ts'],
+      rules: {
+        'consistent-return': 0,
+      },
+    },
   ],
 };
