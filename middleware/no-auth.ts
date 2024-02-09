@@ -12,7 +12,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
     const cleanFetchInstance = $fetch.create({ baseURL: '/', headers: {} });
     $fetch = cleanFetchInstance;
     return;
-  };
+  }
   // If there is an user, checks for roles and redirects to the right page
   const tokenResult = await user.getIdTokenResult();
   const path = tokenResult.claims.admin ? '/admin' : '/home';
