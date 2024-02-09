@@ -22,6 +22,7 @@
       /> -->
       <v-card-text class="text-center">
         <AuthGoogleLoginButton />
+        <AuthFacebookLoginButton />
       </v-card-text>
     </v-card>
   </div>

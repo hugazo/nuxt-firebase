@@ -7,10 +7,6 @@
   </v-btn>
 </template>
 
-<script lang="ts">
-
-</script>
-
 <script setup lang="ts">
 const { signInWithGoogle } = useAuth();
 </script>
