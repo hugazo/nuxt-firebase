@@ -53,8 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import { getAuth, signOut } from 'firebase/auth';
-
 const items = [
   {
     title: 'Profile',
@@ -66,11 +64,7 @@ const items = [
   },
 ];
 
-const logout = () => {
-  const auth = getAuth();
-  signOut(auth);
-  navigateTo('/');
-};
+const { logout } = useLogout();
 
 const user = useCurrentUser();
 </script>
