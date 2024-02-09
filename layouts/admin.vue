@@ -64,7 +64,5 @@ const items = [
   },
 ];
 
-const { logout } = useLogout();
-
-const user = useCurrentUser();
+const { user, logout } = useAuth();
 </script>

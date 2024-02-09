@@ -1,6 +1,6 @@
 <template>
   <div class="w-100 h-100 flex-column d-flex align-center justify-center">
-    <p>Hi, this is the home page</p>
+    <p>Hi, this is the home page {{ user?.displayName }}</p>
     <v-btn @click="logout">
       Logout
     </v-btn>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-const { logout } = useLogout();
+const { user, logout } = useAuth();
 
 definePageMeta({
   title: 'Home',
