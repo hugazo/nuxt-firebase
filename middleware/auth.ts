@@ -1,3 +1,5 @@
+import { getCurrentUser } from 'vuefire';
+
 export default defineNuxtRouteMiddleware(async (to) => {
   // Disables this middleware on server-side
   if (process.server) return;
