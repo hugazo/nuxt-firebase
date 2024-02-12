@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="queryResult">
+    <template v-if="queryResult.users">
       <v-data-table :items="queryResult.users" />
     </template>
     <p v-else>
@@ -16,10 +16,16 @@ import { getFunctions, httpsCallable } from 'firebase/functions';
 const queryResult = computedAsync(async () => {
   try {
     const functions = getFunctions();
-    const { data } = await httpsCallable(functions, 'User-getAllUsers')();
+    const functionReference = httpsCallable(functions, 'User-getAllUsers');
+    const { data } = await functionReference();
     return data as ListUsersResult;
   } catch (error) {
-    return [];
+    return {} as ListUsersResult;
   }
+});
+
+// Define if page shold be seen in navigator
+definePageMeta({
+  includeInNavigator: true,
 });
 </script>

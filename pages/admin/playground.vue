@@ -11,4 +11,8 @@
 
 <script lang="ts" setup>
 const { pending, data: value } = useLazyFetch('/api/hello', { server: false });
+
+definePageMeta({
+  includeInNavigator: true,
+});
 </script>

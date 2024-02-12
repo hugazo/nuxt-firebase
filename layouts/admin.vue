@@ -2,7 +2,7 @@
   <div>
     <v-app-bar>
       <template #prepend>
-        <v-app-bar-nav-icon />
+        <v-app-bar-nav-icon @click="store.toggleNavigator" />
       </template>
       <v-app-bar-title>Admin Site</v-app-bar-title>
       <v-spacer />
@@ -53,6 +53,8 @@
 </template>
 
 <script setup lang="ts">
+import NavigatorStore from '@/stores/navigator';
+
 const items = [
   {
     title: 'Profile',
@@ -65,4 +67,5 @@ const items = [
 ];
 
 const { user, logout } = useAuth();
+const store = NavigatorStore();
 </script>

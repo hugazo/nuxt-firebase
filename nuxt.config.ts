@@ -31,6 +31,8 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     // VueUse
     '@vueuse/nuxt',
+    // Pinia
+    '@pinia/nuxt',
     // Vuefire
     'nuxt-vuefire',
   ],
