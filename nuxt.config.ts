@@ -18,6 +18,11 @@ export default defineNuxtConfig({
       'vuetify',
     ],
   },
+  imports: {
+    dirs: [
+      'store/*.ts',
+    ],
+  },
   modules: [
     // Vuetify vite module
     // https://vuetifyjs.com/en/getting-started/installation/#using-nuxt-3
