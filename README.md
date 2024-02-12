@@ -55,3 +55,29 @@ Locally preview production build:
 # pnpm
 pnpm run preview
 ```
+
+## Used Libraries
+
+- Typescript
+- Framework: Nuxt+
+  - Vue Router
+  - Nuxt Vuefire
+  - Nuxt Devtools
+- Linter: Eslint
+  - Nuxt Module
+  - Typescript Plugin
+  - Typescript Parser
+  - Config Airbnb-Base/Typescript-Base
+  - Plugin Import
+  - Vue Parser
+- State Management: Pinia
+- UI Library: Vuetify
+  - MDI Font
+- Firebase
+  - Auth
+  - Vuefire
+  - Firebase Admin
+  - Firebase Functions
+- Other Tools:
+  - Concurrently
+  - Nuxt
