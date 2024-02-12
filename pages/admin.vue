@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import NavigatorStore from '@/stores/navigator';
-
 // Define options for all nested pages
 definePageMeta({
   middleware: [
@@ -18,7 +16,7 @@ const adminPages = useRoute().matched
   .filter((route) => route.meta?.includeInNavigator);
 
 // Use navigator store
-const { showNavigator } = storeToRefs(NavigatorStore());
+const { showNavigator } = storeToRefs(navigatorStore());
 </script>
 
 <template>

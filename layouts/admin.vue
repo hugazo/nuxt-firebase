@@ -53,8 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import NavigatorStore from '@/stores/navigator';
-
 const items = [
   {
     title: 'Profile',
@@ -67,5 +65,5 @@ const items = [
 ];
 
 const { user, logout } = useAuth();
-const store = NavigatorStore();
+const store = navigatorStore();
 </script>
