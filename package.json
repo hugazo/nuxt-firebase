@@ -5,11 +5,12 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "concurrently --names 'nuxt,emulator,functions' 'nuxt dev' 'pnpm emulators' 'pnpm dev:functions'",
-    "emulators": "firebase emulators:start --only=auth,functions --import ./firebase-export",
-    "emulators:preserve": "firebase emulators:start --only=auth,functions --import ./firebase-export --export-on-exit ./firebase-export",
+    "emulators": "firebase emulators:start --only=auth,functions",
+    "emulators:preserve": "firebase emulators:start --only=auth,functions  --import ./firebase-export --export-on-exit",
     "dev:functions": "cd functions && pnpm run dev",
     "generate": "nuxt generate",
     "preview": "pnpm build && firebase emulators:start",
+    "deploy:firebase": "firebase deploy",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
