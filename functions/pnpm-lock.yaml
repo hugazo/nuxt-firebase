@@ -12,8 +12,8 @@ dependencies:
     specifier: ^11.8.0
     version: 11.11.1
   firebase-functions:
-    specifier: ^4.6.0
-    version: 4.6.0(firebase-admin@11.11.1)
+    specifier: ^4.7.0
+    version: 4.7.0(firebase-admin@11.11.1)
 
 devDependencies:
   esbuild:
@@ -1466,8 +1466,8 @@ packages:
       - supports-color
     dev: false
 
-  /firebase-functions@4.6.0(firebase-admin@11.11.1):
-    resolution: {integrity: sha512-mY3wuU/Qe+vjVyoCIv0TGXcqr5iQhsMlccLBSAHJ+cWgbszo915mcFP8E9adtXoitqf/4CVzzTwYcfPdCQo2RQ==}
+  /firebase-functions@4.7.0(firebase-admin@11.11.1):
+    resolution: {integrity: sha512-YgWqA9otWlBUouY4I2yd0vq9SyQdQ6GJxfH7wGJclzS2pzBQHcU5HhE1Vz/xTrWcKJyw8uPN98WtSE9/APUJJg==}
     engines: {node: '>=14.10.0'}
     hasBin: true
     peerDependencies:
