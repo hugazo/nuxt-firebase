@@ -9,6 +9,7 @@ export default defineNuxtRouteMiddleware(async (to) => {
   const user = await getCurrentUser();
   // No user, proceed with page load
   if (!user) {
+    // Cleans the $fetch instance
     const cleanFetchInstance = $fetch.create({ baseURL: '/', headers: {} });
     $fetch = cleanFetchInstance;
     return;

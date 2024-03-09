@@ -10,30 +10,31 @@
         Log-in
       </v-card-text>
       <!-- Uncomment this when implementing email magic login -->
-      <!-- <div class="text-subtitle-1 text-medium-emphasis">
-        Account
-      </div>
-
-      <v-text-field
-        density="compact"
-        placeholder="Email address"
-        prepend-inner-icon="mdi-email-outline"
-        variant="outlined"
-      /> -->
-      <v-card-text class="text-center">
-        <AuthGoogleLoginButton />
-        <AuthFacebookLoginButton />
+      <AuthEmailSignIn />
+      <v-card-item class="text-center">
+        <p class="text-subtitle-1">
+          Or you can log in with
+        </p>
+        <v-btn-toggle>
+          <AuthGoogleLoginButton />
+          <AuthFacebookLoginButton />
+        </v-btn-toggle>
+      </v-card-item>
+      <v-card-item class="text-center">
         <p class="py-2">
           Or you can turn the lights
         </p>
         <ThemeTogglerButton />
-      </v-card-text>
+      </v-card-item>
     </v-card>
   </div>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  middleware: ['no-auth'],
+  middleware: [
+    'magic-links',
+    'no-auth',
+  ],
 });
 </script>

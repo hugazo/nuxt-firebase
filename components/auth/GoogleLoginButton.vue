@@ -3,7 +3,7 @@
     prepend-icon="mdi-google"
     @click="signInWithGoogle"
   >
-    Login with Google
+    Google
   </v-btn>
 </template>
 

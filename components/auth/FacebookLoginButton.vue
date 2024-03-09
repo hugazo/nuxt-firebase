@@ -3,7 +3,7 @@
     prepend-icon="mdi-facebook"
     @click="signInWithFacebook"
   >
-    Login with Facebook
+    Facebook
   </v-btn>
 </template>
 
